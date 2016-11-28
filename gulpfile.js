@@ -35,6 +35,12 @@ var gulp = require('gulp'),
 		gulp.watch('./app/**/*.html',['html']);
 		gulp.watch('./app/**/*.js',['browserify']);
 	});
+	
+	var ghPages = require('gulp-gh-pages');	
+	gulp.task('deploy', function() {
+	  return gulp.src('./gh-pages/**/*')
+	    .pipe(ghPages());
+	});
 
 	gulp.task('default',['browserify']);
 

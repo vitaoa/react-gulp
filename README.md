@@ -1,8 +1,17 @@
 # 模仿知乎界面的一个简单React demo
 
-博客地址：http://blog.xieliqun.com/2016/11/04/react-zhihu/
-
-
+When a \ne 0a≠0, there are two solutions to (ax^2 + bx + c = 0)(ax
+​2
+​​ +bx+c=0) and they are x = {-b \pm \sqrt{b^2-4ac} \over 2a}.x=
+​2a
+​
+​−b±√
+​b
+​2
+​​ −4ac
+​
+​​ 
+​​ .
 
 > 这是一个模仿知乎界面的简单React demo。这个React demo能让你从零开始学习React，并逐渐掌握React。它包括了一个项目从零到项目完成的整个过程。
 
@@ -126,7 +135,7 @@ gulp.task('deploy', function() {
 });
 ```
 
-## webpack + es6 ([webpack分支](https://github.com/tsrot/react-zhihu/tree/webpack))
+## webpack + es6 
 
 1、手动删除bower_components，统一使用npm，这样有利于后面webpack的配置。
 把bootstrap安装到node_modules:
@@ -143,9 +152,3 @@ $ npm install --save-dev html-webpack-plugin extract-text-webpack-plugin babel-c
 ```
 4、配饰gulp和webpack
 
-## 后续
-
-将在分支中更新使用下列技术的版本
-- webpack + es6 : [webpack分支](https://github.com/tsrot/react-zhihu/tree/webpack)
-- webpack + es6 + redux 
-- webkack + es6 + redux + react-router
