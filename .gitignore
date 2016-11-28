@@ -3,6 +3,7 @@
 .publish
 coverage
 dist
+content
 node_modules
 gh-pages
 bower_components
