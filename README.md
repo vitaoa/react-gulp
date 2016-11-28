@@ -1,4 +1,4 @@
-# 模仿知乎界面的一个简单React demo
+# 简单React demo
 
 When a \ne 0a≠0, there are two solutions to (ax^2 + bx + c = 0)(ax
 ​2
