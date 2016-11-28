@@ -1,6 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [FX](content/fx)
-* [PM](content/PM.md)
+* [FX](fx)
+* [PM](pm.md)
 
