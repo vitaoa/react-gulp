@@ -1,0 +1,334 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Getting started · 使用手册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        <meta name="identifier" content="978-3-16-148410-0" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Webpack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1.1" data-path="Getting-started.html">
+            
+                <a href="Getting-started.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Getting started</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<p>Before getting started you should make sure you have a recent version of Node.js and NPM installed. See <a href="http://nodejs.org/" target="_blank">nodejs.org</a> for installation details. We&apos;ll use NPM to set up various tools.</p>
+</blockquote>
+<p>Getting started with Webpack is straightforward. I&apos;ll show you how to set up a simple project based on it. As a first step, set a directory for your project and hit <code>npm init</code> and fill in some answers. That will create a <code>package.json</code> for you. Don&apos;t worry if some fields don&apos;t look ok, you can modify those later.</p>
+<h2 id="installing-webpack">Installing Webpack</h2>
+<p>Next you should get Webpack installed. We&apos;ll do a local install and save it as a project dependency. This way you can invoke the build anywhere (build server, whatnot). Run <code>npm i webpack --save-dev</code>. If you want to run the tool, hit <code>node_modules/.bin/webpack</code>.</p>
+<h2 id="directory-structure">Directory Structure</h2>
+<p>Structure your project like this:</p>
+<ul>
+<li>/app<ul>
+<li>main.js</li>
+<li>component.js</li>
+</ul>
+</li>
+<li>/build<ul>
+<li>bundle.js (automatically created)</li>
+<li>index.html</li>
+</ul>
+</li>
+<li>package.json</li>
+<li>webpack.config.js</li>
+</ul>
+<p>In this case we&apos;ll create <code>bundle.js</code> using Webpack based on our <code>/app</code>. To make this possible, let&apos;s set up <code>webpack.config.js</code>.</p>
+<h2 id="creating-webpack-configuration">Creating Webpack Configuration</h2>
+<p>In our case a basic configuration could look like this:</p>
+<p><em>webpack.config.js</em></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+
+
+<span class="hljs-built_in">module</span>.exports = {
+    entry: path.resolve(__dirname, <span class="hljs-string">&apos;app/main.js&apos;</span>),
+    output: {
+        path: path.resolve(__dirname, <span class="hljs-string">&apos;build&apos;</span>),
+        filename: <span class="hljs-string">&apos;bundle.js&apos;</span>,
+    },
+};
+</code></pre>
+<h2 id="running-your-first-build">Running Your First Build</h2>
+<p>Now that we have basic configuration in place, we&apos;ll need something to build. Let&apos;s start with a classic <code>Hello World</code> type of app. Set up <code>/app</code> like this:</p>
+<p><em>app/component.js</em></p>
+<pre><code class="lang-javascript"><span class="hljs-meta">&apos;use strict&apos;</span>;
+
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> element = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;h1&apos;</span>);
+
+    element.innerHTML = <span class="hljs-string">&apos;Hello world&apos;</span>;
+
+    <span class="hljs-keyword">return</span> element;
+};
+</code></pre>
+<p><em>app/main.js</em></p>
+<pre><code class="lang-javascript"><span class="hljs-meta">&apos;use strict&apos;</span>;
+<span class="hljs-keyword">var</span> component = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./component.js&apos;</span>);
+
+
+<span class="hljs-built_in">document</span>.body.appendChild(component());
+</code></pre>
+<p>Now run <code>webpack</code> in your terminal and your application will be built. A <em>bundle.js</em> file will appear in your <code>/build</code> folder. Your <em>index.html</em> file in the <code>build/</code> folder will need to load up the application.</p>
+<p><em>build/index.html</em></p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;bundle.js&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p>It would be possible to generate this file with Webpack using <a href="https://www.npmjs.com/package/html-webpack-plugin" target="_blank">html-webpack-plugin</a>. You can give it a go if you are feeling adventurous. It is mostly a matter of configuration. Generally this is the way you work with Webpack.</p>
+</blockquote>
+<h2 id="running-the-application">Running the Application</h2>
+<p>Just double-click the <em>index.html</em> file or set up a web server pointing to the <code>build/</code> folder.</p>
+<h2 id="setting-up-packagejson-scripts">Setting Up <code>package.json</code> <em>scripts</em></h2>
+<p>It can be useful to run build, serve and such commands through <code>npm</code>. That way you don&apos;t have to worry about the technology used in the project. You just invoke the commands. This can be achieved easily by setting up a <code>scripts</code> section to <code>package.json</code>.</p>
+<p>In this case we can move the build step behind <code>npm run build</code> like this:</p>
+<ol>
+<li><code>npm i webpack --save</code> - If you want to install Webpack just a development dependency, you can use <code>--save-dev</code>. This is handy if you are developing a library and don&apos;t want it to depend on the tool (bad idea!).</li>
+<li>Add the following to <code>package.json</code>:</li>
+</ol>
+<pre><code class="lang-json">  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;build&quot;</span>: <span class="hljs-string">&quot;webpack&quot;</span>
+  }
+</code></pre>
+<p>To invoke a build, you can hit <code>npm run build</code> now.</p>
+<p>Later on this approach will become more powerful as project complexity grows. You can hide the complexity within <code>scripts</code> while keeping the interface simple.</p>
+<p>The potential problem with this approach is that it can tie you to a Unix environment in case you use environment specific commands. If so, you may want to consider using something environment agnostic, such as <a href="https://www.npmjs.com/package/gulp-webpack" target="_blank">gulp-webpack</a>.</p>
+<blockquote>
+<p>Note that NPM will find Webpack. <code>npm run</code> adds it to the <code>PATH</code> temporarily so our simple incantation will work.</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Webpack">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Getting started","level":"1.1.1","depth":2,"previous":{"title":"Webpack","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"Getting started","level":"1.1.1","depth":2,"path":"Getting-started.md","ref":"Getting-started.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"978-3-16-148410-0","variables":{},"title":"使用手册","language":"zh-hans","gitbook":"*","description":"记录一些常用模块的使用","direction":"ltr"},"file":{"path":"Getting-started.md","mtime":"2016-11-28T07:46:55.856Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-28T08:01:51.226Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
