@@ -1,195 +1,243 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>React-gulp by vitaoa</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">React-gulp</h1>
-      <h2 class="project-tagline"></h2>
-      <a href="https://github.com/vitaoa/react-gulp" class="btn">View on GitHub</a>
-      <a href="https://github.com/vitaoa/react-gulp/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/vitaoa/react-gulp/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
 
-    <section class="main-content">
-      <h1>
-<a id="模仿知乎界面的一个简单react-demo" class="anchor" href="#%E6%A8%A1%E4%BB%BF%E7%9F%A5%E4%B9%8E%E7%95%8C%E9%9D%A2%E7%9A%84%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95react-demo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>模仿知乎界面的一个简单React demo</h1>
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Webpack · 使用手册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        <meta name="identifier" content="978-3-16-148410-0" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
 
-<p>博客地址：<a href="http://blog.xieliqun.com/2016/11/04/react-zhihu/">http://blog.xieliqun.com/2016/11/04/react-zhihu/</a></p>
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
 
-<blockquote>
-<p>这是一个模仿知乎界面的简单React demo。这个React demo能让你从零开始学习React，并逐渐掌握React。它包括了一个项目从零到项目完成的整个过程。</p>
-</blockquote>
+    
 
-<p><strong>项目运行</strong></p>
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
 
-<div class="highlight highlight-source-js"><pre>$ git clone https<span class="pl-k">:</span><span class="pl-c">//github.com/tsrot/react-zhihu.git</span>
-$ cd react<span class="pl-k">-</span>zhihu
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
-$ npm install
+    
+    <link rel="next" href="Getting-started.html" />
+    
+    
 
-$ bower install
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
 
-$ gulp server   <span class="pl-c">//用浏览器打开 localhost:5000</span></pre></div>
+            
+                <nav role="navigation">
+                
 
-<h2>
-<a id="搭建开发环境" class="anchor" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>搭建开发环境</h2>
 
-<h3>
-<a id="初始化npm-bower" class="anchor" href="#%E5%88%9D%E5%A7%8B%E5%8C%96npm-bower" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>初始化npm bower</h3>
+<ul class="summary">
+    
+    
 
-<div class="highlight highlight-source-js"><pre>npm init  <span class="pl-c">//一直enter，默认就好</span>
+    
 
-bower init <span class="pl-c">//同上</span>
-</pre></div>
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Webpack
+            
+                </a>
+            
 
-<h3>
-<a id="安装必要的开发工具包" class="anchor" href="#%E5%AE%89%E8%A3%85%E5%BF%85%E8%A6%81%E7%9A%84%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8C%85" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>安装必要的开发工具包</h3>
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="Getting-started.html">
+            
+                <a href="Getting-started.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
 
-<ul>
-<li>gulp ：基于流的自动化构建工具</li>
-<li>gulp-browserify ：前端模块及依赖管理</li>
-<li>gulp-concat ：文件合并插件</li>
-<li>gulp-react ：JSX语法转化工具</li>
-<li>gulp-connect ：构建本地开发Web服务器</li>
-<li>lodash ：一个具有一致接口、模块化、高性能等特性的 JavaScript 工具库</li>
-<li>reactify ：React 编译器</li>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
 </ul>
 
-<div class="highlight highlight-source-js"><pre>npm install gulp gulp<span class="pl-k">-</span>browserify gulp<span class="pl-k">-</span>concat gulp<span class="pl-k">-</span>react gulp<span class="pl-k">-</span>connect lodash reactify <span class="pl-k">--</span>save<span class="pl-k">-</span>dev</pre></div>
 
-<h3>
-<a id="安装生产环境依赖包" class="anchor" href="#%E5%AE%89%E8%A3%85%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E4%BE%9D%E8%B5%96%E5%8C%85" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>安装生产环境依赖包</h3>
+                </nav>
+            
+        
+    </div>
 
-<ul>
-<li>react ：主要框架</li>
-<li>react-dom ：React的DOM操作类</li>
-<li>bootstrap ：bootstrap样式</li>
-</ul>
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
 
-<div class="highlight highlight-source-js"><pre>npm install <span class="pl-k">--</span>save react react<span class="pl-k">-</span>dom
+<div class="book-header" role="navigation">
+    
 
-bower install <span class="pl-k">--</span>save bootstrap</pre></div>
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Webpack</a>
+    </h1>
+</div>
 
-<h3>
-<a id="写入gulp配置文件gulpfilejs" class="anchor" href="#%E5%86%99%E5%85%A5gulp%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6gulpfilejs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>写入gulp配置文件gulpfile.js</h3>
 
-<p>你可以在npm的网站上找到相应插件的gulp配置写法。我配置的<a href="https://github.com/tsrot/">gulpfile.js</a></p>
 
-<h2>
-<a id="开发" class="anchor" href="#%E5%BC%80%E5%8F%91" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>开发</h2>
 
-<ul>
-<li>切分相应的模块</li>
-<li>分清UI组件和容器组件</li>
-<li>学会如何在组件之间通信</li>
-<li>注意写作规范和开发细节</li>
-</ul>
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h1>
 
-<h2>
-<a id="部署生产" class="anchor" href="#%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>部署生产</h2>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
 
-<p>请切换分支到 product 分支</p>
+                        </div>
+                    </div>
+                
+            </div>
 
-<h3>
-<a id="修改gulpfile文件" class="anchor" href="#%E4%BF%AE%E6%94%B9gulpfile%E6%96%87%E4%BB%B6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>修改gulpfile文件</h3>
+            
+                
+                
+                <a href="Getting-started.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Getting started">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-c">//添加copy任务</span>
-<span class="pl-smi">gulp</span>.<span class="pl-en">task</span>(<span class="pl-s"><span class="pl-pds">'</span>copy<span class="pl-pds">'</span></span>,<span class="pl-k">function</span>(){
-    <span class="pl-smi">gulp</span>.<span class="pl-en">src</span>(<span class="pl-s"><span class="pl-pds">'</span>./app/css/*<span class="pl-pds">'</span></span>)
-    .<span class="pl-en">pipe</span>(<span class="pl-smi">gulp</span>.<span class="pl-en">dest</span>(<span class="pl-s"><span class="pl-pds">'</span>./dist/css<span class="pl-pds">'</span></span>));
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Webpack","level":"1.1","depth":1,"next":{"title":"Getting started","level":"1.1.1","depth":2,"path":"Getting-started.md","ref":"Getting-started.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"978-3-16-148410-0","variables":{},"title":"使用手册","language":"zh-hans","gitbook":"*","description":"记录一些常用模块的使用","direction":"ltr"},"file":{"path":"README.md","mtime":"2016-11-28T07:46:55.871Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-28T08:01:51.226Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
 
-    <span class="pl-smi">gulp</span>.<span class="pl-en">src</span>(<span class="pl-s"><span class="pl-pds">'</span>./bower_components/**/*<span class="pl-pds">'</span></span>)
-    .<span class="pl-en">pipe</span>(<span class="pl-smi">gulp</span>.<span class="pl-en">dest</span>(<span class="pl-s"><span class="pl-pds">'</span>./dist/libs<span class="pl-pds">'</span></span>));
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
 
-    <span class="pl-smi">gulp</span>.<span class="pl-en">src</span>(<span class="pl-s"><span class="pl-pds">'</span>./*.html<span class="pl-pds">'</span></span>)
-    .<span class="pl-en">pipe</span>(<span class="pl-smi">gulp</span>.<span class="pl-en">dest</span>(<span class="pl-s"><span class="pl-pds">'</span>./dist<span class="pl-pds">'</span></span>));
-});
-
-<span class="pl-c">//生产服务器</span>
-<span class="pl-smi">gulp</span>.<span class="pl-en">task</span>(<span class="pl-s"><span class="pl-pds">'</span>connect-pro<span class="pl-pds">'</span></span>,<span class="pl-k">function</span>(){
-    <span class="pl-smi">connect</span>.<span class="pl-en">server</span>({
-        root<span class="pl-k">:</span><span class="pl-s"><span class="pl-pds">'</span>./dist<span class="pl-pds">'</span></span>,
-        port<span class="pl-k">:</span>port,
-        livereload<span class="pl-k">:</span><span class="pl-c1">true</span>,
-    })
-});
-
-<span class="pl-c">//添加build任务</span>
-<span class="pl-smi">gulp</span>.<span class="pl-en">task</span>(<span class="pl-s"><span class="pl-pds">'</span>build<span class="pl-pds">'</span></span>,[<span class="pl-s"><span class="pl-pds">'</span>browserify<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>copy<span class="pl-pds">'</span></span>]);
-
-<span class="pl-c">//添加启动生产服务器任务</span>
-<span class="pl-smi">gulp</span>.<span class="pl-en">task</span>(<span class="pl-s"><span class="pl-pds">'</span>server-pro<span class="pl-pds">'</span></span>,[<span class="pl-s"><span class="pl-pds">'</span>build<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>connect-pro<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>watch<span class="pl-pds">'</span></span>]);</pre></div>
-
-<h3>
-<a id="修改indexhtml引用目录" class="anchor" href="#%E4%BF%AE%E6%94%B9indexhtml%E5%BC%95%E7%94%A8%E7%9B%AE%E5%BD%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>修改index.html引用目录</h3>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-k">&lt;</span>link rel<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> href<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>./libs/bootstrap/dist/css/bootstrap.css<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
-<span class="pl-k">&lt;</span>link rel<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> href<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>./css/index.css<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
-
-<span class="pl-k">&lt;</span>script src<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>./js/main.js<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span><span class="pl-k">/</span>script<span class="pl-k">&gt;</span></pre></div>
-
-<h3>
-<a id="使用gulp-gh-pages部署到github-pages" class="anchor" href="#%E4%BD%BF%E7%94%A8gulp-gh-pages%E9%83%A8%E7%BD%B2%E5%88%B0github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>使用gulp-gh-pages部署到github pages</h3>
-
-<p>下载gulp-gh-pages插件</p>
-
-<div class="highlight highlight-source-js"><pre>npm install <span class="pl-k">--</span>save<span class="pl-k">-</span>dev gulp<span class="pl-k">-</span>gh<span class="pl-k">-</span>pages</pre></div>
-
-<p>在gulpfile文件中添加配置gulp-gh-pages代码</p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> ghPages <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>gulp-gh-pages<span class="pl-pds">'</span></span>);
-
-<span class="pl-smi">gulp</span>.<span class="pl-en">task</span>(<span class="pl-s"><span class="pl-pds">'</span>deploy<span class="pl-pds">'</span></span>, <span class="pl-k">function</span>() {
-  <span class="pl-k">return</span> <span class="pl-smi">gulp</span>.<span class="pl-en">src</span>(<span class="pl-s"><span class="pl-pds">'</span>./dist/**/*<span class="pl-pds">'</span></span>)
-    .<span class="pl-en">pipe</span>(<span class="pl-en">ghPages</span>());
-});</pre></div>
-
-<h2>
-<a id="webpack--es6-webpack分支" class="anchor" href="#webpack--es6-webpack%E5%88%86%E6%94%AF" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>webpack + es6 (<a href="https://github.com/tsrot/react-zhihu/tree/webpack">webpack分支</a>)</h2>
-
-<p>1、手动删除bower_components，统一使用npm，这样有利于后面webpack的配置。
-把bootstrap安装到node_modules:</p>
-
-<div class="highlight highlight-source-js"><pre>$ npm install <span class="pl-k">--</span>save bootstrap</pre></div>
-
-<p>2、安装webpack-stream、vinyl-named、gulp-clean</p>
-
-<div class="highlight highlight-source-js"><pre>$ npm install <span class="pl-k">--</span>save<span class="pl-k">-</span>dev webpack<span class="pl-k">-</span>stream vinyl<span class="pl-k">-</span>named gulp<span class="pl-k">-</span>clean</pre></div>
-
-<p>3、安装webpack plugin和webpack loader</p>
-
-<div class="highlight highlight-source-js"><pre>$ npm install <span class="pl-k">--</span>save<span class="pl-k">-</span>dev html<span class="pl-k">-</span>webpack<span class="pl-k">-</span>plugin extract<span class="pl-k">-</span>text<span class="pl-k">-</span>webpack<span class="pl-k">-</span>plugin babel<span class="pl-k">-</span>core babel<span class="pl-k">-</span>loader babel<span class="pl-k">-</span>preset<span class="pl-k">-</span>es2015 babel<span class="pl-k">-</span>preset<span class="pl-k">-</span>react style<span class="pl-k">-</span>loader css<span class="pl-k">-</span>loader postcss<span class="pl-k">-</span>loader autoprefixer file<span class="pl-k">-</span>loader</pre></div>
-
-<p>4、配饰gulp和webpack</p>
-
-<h2>
-<a id="后续" class="anchor" href="#%E5%90%8E%E7%BB%AD" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>后续</h2>
-
-<p>将在分支中更新使用下列技术的版本</p>
-
-<ul>
-<li>webpack + es6 : <a href="https://github.com/tsrot/react-zhihu/tree/webpack">webpack分支</a>
-</li>
-<li>webpack + es6 + redux </li>
-<li>webkack + es6 + redux + react-router</li>
-</ul>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/vitaoa/react-gulp">React-gulp</a> is maintained by <a href="https://github.com/vitaoa">vitaoa</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
+    </body>
 </html>
+
