@@ -10,8 +10,5 @@
 	    "mobi": "styles/mobi.css",
 	    "epub": "styles/epub.css"
 	},
-	"plugins": [
-	    "katex"
-	],
     "direction": "ltr"
 }

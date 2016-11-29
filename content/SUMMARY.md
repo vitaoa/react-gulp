@@ -1,8 +1,6 @@
-# Navigation
+# Summary
 
-[Introduction](Home.md)
-
-* [Webpack](README.md)
-    * [Getting started](Getting-started.md)
-    * [词汇表](Glossary.md)
+* [Introduction](README.md)
+* [FX](fx.md)
+* [PM](pm.md)
 

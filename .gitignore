@@ -2,6 +2,7 @@
 *.log
 .publish
 coverage
+_book
 dist
 node_modules
 gh-pages
