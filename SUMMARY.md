@@ -1,10 +1,10 @@
 # Summary
 
 * [Introduction](README.md)
-* [FX](content/fx.md)
+* [FX](fx)
    * LP
-       * 基本模板
-* [PM](content/PM.md)
+       * [基本模板](ji_ben_mo_ban.md)
 * [PM](pm.md)
    * LP
        * 基本模板
+
