@@ -38,10 +38,15 @@ var gulp = require('gulp'),
 	
 	var ghPages = require('gulp-gh-pages');	
 	gulp.task('deploy', function() {
-	  return gulp.src('./gh-pages/**/*')
-	    .pipe(ghPages());
+	  	return gulp.src('./gh-pages/**/*')
+	    	.pipe(ghPages());
 	});
-
+	
+	var gulpCopy = require('gulp-copy');
+	gulp.task('copy', function() {
+		return gulp.src('SUMMARY.md')
+  			.pipe(gulpCopy('./content'));
+	});
 	gulp.task('default',['browserify']);
 
 	gulp.task('server',['browserify','connect','watch']);
