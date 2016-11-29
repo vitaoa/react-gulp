@@ -1,9 +1,10 @@
 # Summary
 
 * [Introduction](README.md)
-* [FX](content/fx.md)
+* [FX](fx)
    * LP
-       * 基本模板
-* [PM](content/PM.md)
+       * [基本页面模板](content/FX/fx_ji_ben_ye_mian_mo_ban.md)
+* [PM](pm.md)
    * LP
-       * 基本模板
+       * [基本页面模板](content/PM/pm_ji_ben_ye_mian_mo_ban.md)
+
